@@ -1,2 +1,25 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
+<% provide(:title, 'Sign up') %>
+
+<div class="d-flex flex-column">
+
+    <div class="row">
+        <h1 class="my-1 mx-5">Sign up</h1>
+    </div>
+
+    <div class="row">
+    <div class="col-md-6 col-md-offset-3 my-5 mx-5">
+    <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+
+        <%= f.submit "Sign-up", class: "btn btn-dark my-5" %>
+        <% end %>
+    </div>
+    </div>
+</div>
