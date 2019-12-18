@@ -30,15 +30,15 @@
     </ul>
 
     <% if logged_in? %>
-      <li><%= link_to "Users", '#' %></li>
+      <%= link_to "Users", users_show_path,  class: "btn btn-primary my-2 my-sm-0 mx-5" %>
 
-    <%= link_to "Log out", logout_path, method: :delete %>
-    <% else %>
-    <li><%= link_to "Log in", login_path %></li>
+      <%= link_to "Log out", logout_path, method: :delete,  class: "btn btn-dark my-2 my-sm-0 mx-5" %>
+      <% else %>
+      <%= link_to "Login", sessions_new_path, class: "btn btn-primary my-2 my-sm-0 mx-5"%>
+      <%= link_to "Sign-up", users_new_path, class: "btn btn-dark my-2 my-sm-0 mx-5"%>
   <% end %>
 
-    <%= link_to "Login", sessions_new_path, class: "btn btn-primary my-2 my-sm-0 mx-5"%>
-    <%= link_to "Sign-up", users_new_path, class: "btn btn-dark my-2 my-sm-0 mx-5"%>
+
     
     
   </div>
