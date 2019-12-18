@@ -13,18 +13,15 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Shows</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Clubs</a>
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="#">Pubs</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">New Places</a>
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="#">Free Events</a>
       </li>
+      <%= link_to "CREATE AN EVENT", users_create_path, class:" nav-item active nav-link" %>
     </ul>
 
     <% if logged_in? %>
