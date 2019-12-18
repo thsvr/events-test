@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'events/index'
+  get 'events/new'
+  get 'events/create'
+  get 'events/show'
+  get 'index/new'
+  get 'index/create'
+  get 'index/show'
   get 'sessions/new'
   get 'users/new'
   get 'users/create'
